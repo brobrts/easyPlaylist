@@ -8,7 +8,7 @@ angular.module('audioModule',[])
 		templateUrl: 'playlist-source/audio-directive.html',
         
         controller: function($scope, $rootScope, $element, $document, $timeout) {
-            console.log("audio controller init");
+            //console.log("audio controller init");
             $scope.trackData = {};
             $scope.trackData.currentVol = 0.5; //todo. specifiy this in one place.  remove from html...?    
             $scope.trackData.currentTime = 0;
@@ -52,7 +52,6 @@ angular.module('audioModule',[])
 
             // client code listens for this and sets track with audio.set message
             $scope.ready = function(){ 
-                console.log("ready");
                 $rootScope.$broadcast('audio.ready'); 
             };
              
@@ -96,7 +95,6 @@ angular.module('audioModule',[])
                                                  currentTrack, 
                                                  totalTracks){
                 //This logic belongs in the playList.
-                console.log("audio.set received");
                 var play = !$scope.audio.paused;
                 $scope.audio.src = audioFile; 
                 $scope.trackData.playListEntry = playlistEntry;   
@@ -115,7 +113,7 @@ angular.module('audioModule',[])
         }, // end return
 
 		link: function(scope, element, attrs) {
-            console.log("audio post link");
+            //console.log("audio post link");
             scope.ready();
 		}
 	};
