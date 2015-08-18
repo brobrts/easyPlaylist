@@ -6,6 +6,9 @@ Please select 'Raw' to view the html fragments in this doc.
 1.) clone into playlist-source/.  the code expects this to be a top level directory. If this doesn't work for you,
     you can search for the directory (playlist-source) in the code and change it very quickly.
 
+    note: If you are using a grunt file you will have to make it aware of the new subdirectory so it can perform
+          your builds properly.
+
 2.) Add this at the end of your angular modules in index.html:
     <script src="playlist-source/audiodirective.js"></script>
     <script src="playlist-source/playlistdirective.js"></script>
