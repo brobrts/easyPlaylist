@@ -5,8 +5,8 @@ quick and easy html5 audio playlist
     you can search for the directory (playlist-source) in the code and change it very quickly.
 
 2.) Add this at the end of your angular modules in index.html:
-    <script src="playlist-source/audiodirective.js"></script>
-    <script src="playlist-source/playlistdirective.js"></script> 
+    '<script src="playlist-source/audiodirective.js"></script>
+    <script src="playlist-source/playlistdirective.js"></script>' 
 
 3.) Add this tag where you want to include the playlist:
      <div class="panel-body" playlist-directive
