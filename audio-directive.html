@@ -1,0 +1,66 @@
+
+<!-- form-group gives some bootstrap styling -->
+<div class="form-group">
+    <button ng-disabled="trackData.currentTrack == 0" 
+            class="btn btn-default prev" 
+            ng-click="prev()">
+            <i class="glyphicon glyphicon-step-backward"></i> 
+       prev
+    </button>
+
+    <button class="btn btn-default playpause" 
+            ng-click="playpause()" 
+            ng-class="{paused:audio.paused}">
+       <span class="play-text">
+          <i class="glyphicon glyphicon-play"></i>
+          play
+       </span>
+       <span class="pause-text">
+          <i class="glyphicon glyphicon-pause"></i>
+          pause
+       </span>
+    </button>
+
+    <button ng-disabled="trackData.currentTrack >= (trackData.totalTracks-1)" 
+            class="btn btn-default next" 
+            ng-click="next()">
+            next 
+            <i class="glyphicon glyphicon-step-forward"></i>
+    </button>
+
+    <br>
+
+    <label st>
+        vol: 
+        <input type="range"
+               min="0" max="1"
+               value="0.5" 
+               step="0.1"               
+               id="volFader"
+               value="{{trackData.currentVol}}"
+               ng-mouseup="volChanged();"
+               ng-model="trackData.currentVol">
+        </input>
+    </label>
+ 
+    <!-- had some trouble: solution is here:
+         http://forum.ionicframework.com/
+         t/working-with-ng-model-and-input-type-range/949
+     -->
+    <label>
+       time: 
+       <input type="range"
+              min="0" max="{{trackData.duration}}" 
+              value="{{trackData.currentTime}}"
+              step="1"
+              id="timeFader" 
+              ng-change="seeked();"                                           
+              ng-model="trackData.currentTime" />
+    </label>
+</div>
+
+<div class="form-group now-playing">
+    <p> 
+        Now Playing: {{trackData.playListEntry.title}}
+    </p>
+</div>

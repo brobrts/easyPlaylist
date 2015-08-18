@@ -1,0 +1,16 @@
+[
+    {
+        "title": "Way Back",
+        "artist": {"name": "Billy Roberts"},
+        "image": "",
+        "mp3File": "wayBack.mp3",
+        "oggFile": "wayBack.ogg" 
+    },      
+    {
+        "title": "Even Further Back",
+        "artist": {"name": "Billy Roberts"},
+        "image": "",
+        "mp3File": "evenFurtherBack.mp3",
+        "oggFile": "evenFurtherBack.ogg"  
+    }              
+]

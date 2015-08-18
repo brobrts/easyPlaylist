@@ -1,0 +1,17 @@
+<div>
+<table>
+   <thead>
+      <tr><th>Title</th></tr>
+   </thead>
+   <tbody class="panel panel-default"          
+         inner-playlist-directive
+         playlist="playlist" 
+         prop-name="item">  
+      <tr ng-click="ckTune(item.title)">
+         <td><a href="">{{item.title}}</a></td>
+      </tr>
+   </tbody>
+</table>
+   <br>
+   <audio-directive></audio-directive>
+</div>
