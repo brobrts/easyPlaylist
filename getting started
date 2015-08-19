@@ -1,6 +1,5 @@
 # easyPlaylist
-quick and easy html5 audio playlist
-
+Here is one quick way to get started.
 
 1.) clone into playlist-source/.  the code expects this to be a top level directory. If this doesn't work for you,
     you can search for the directory (playlist-source) in the code and change it very quickly.
@@ -27,7 +26,6 @@ quick and easy html5 audio playlist
    $scope.musicData.playlist = [];
 
    $http.get('playlist-source/data/music.json').success(function(response){
-       console.log("http.get");
        $scope.musicData.playlist = response;    
   });
 
@@ -42,4 +40,4 @@ quick and easy html5 audio playlist
   }
 
 7.) It should be working now.  You can also download the working sample app that was
-    created with generator angular.
+    created with generator angular ( too be uploaded soon ).
